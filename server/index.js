@@ -1,3 +1,7 @@
-console.log('server.js');
-console.log('test');
-console.log('test git repo setup');
+import express from "express";
+
+const app = express();
+const PORT = 8000;
+
+app.listen(PORT,()=> console.log(`Server is started in PORT${PORT}`));
+
