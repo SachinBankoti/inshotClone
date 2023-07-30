@@ -1,22 +1,17 @@
-import { Box } from '@mui/material'
-import React, { useEffect } from 'react'
-import { getNews } from '../services/api';
+import { Box } from "@mui/material";
+import React, { useEffect } from "react";
+import { getNews } from "../services/api";
 
 const Articles = () => {
+  useEffect(() => {
+    dailyNews();
+  }, []);
 
-    useEffect(()=>{
-       
-    },[]);
-
-const dailyNews = async() =>{
+  const dailyNews = async () => {
     let response = await getNews();
-}
+  };
 
-  return (
-    <Box>
-        Articles
-    </Box>
-  )
-}
+  return <Box>Articles</Box>;
+};
 
-export default Articles
+export default Articles;
